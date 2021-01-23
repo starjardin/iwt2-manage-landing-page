@@ -1,0 +1,1 @@
+export { defalut as Header } from './components/header'
