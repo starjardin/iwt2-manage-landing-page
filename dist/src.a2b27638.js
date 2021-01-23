@@ -32251,7 +32251,163 @@ Header.Menu = function HeaderMenu(_ref9) {
 
   return /*#__PURE__*/_react.default.createElement(_headerStyles.Menu, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/headerStyles":"src/components/header/styles/headerStyles.js"}],"src/components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/headerStyles":"src/components/header/styles/headerStyles.js"}],"src/components/difference/styles/differenceStyles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Masthead = exports.SectionTitle = exports.Section = exports.Text = exports.Title = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Title = _styledComponents.default.h3(_templateObject2());
+
+exports.Title = Title;
+
+var Text = _styledComponents.default.p(_templateObject3());
+
+exports.Text = Text;
+
+var Section = _styledComponents.default.section(_templateObject4());
+
+exports.Section = Section;
+
+var SectionTitle = _styledComponents.default.h4(_templateObject5());
+
+exports.SectionTitle = SectionTitle;
+
+var Masthead = _styledComponents.default.div(_templateObject6());
+
+exports.Masthead = Masthead;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/difference/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Difference;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _differenceStyles = require("./styles/differenceStyles");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Difference(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_differenceStyles.Container, restProps, children);
+}
+
+Difference.Title = function DifferenceTitle(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_differenceStyles.Title, restProps, children, " ");
+};
+
+Difference.Text = function DifferenceText(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_differenceStyles.Text, restProps, children, " ");
+};
+
+Difference.Section = function DifferenceSection(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_differenceStyles.Section, restProps, children, " ");
+};
+
+Difference.Masthead = function DifferenceMasthead(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_differenceStyles.Masthead, restProps, children, " ");
+};
+
+Difference.SectionTitle = function DifferenceSectionTitle(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_differenceStyles.SectionTitle, restProps, children, " ");
+};
+},{"react":"node_modules/react/index.js","./styles/differenceStyles":"src/components/difference/styles/differenceStyles.js"}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32263,11 +32419,19 @@ Object.defineProperty(exports, "Header", {
     return _header.default;
   }
 });
+Object.defineProperty(exports, "Difference", {
+  enumerable: true,
+  get: function () {
+    return _difference.default;
+  }
+});
 
 var _header = _interopRequireDefault(require("./header"));
 
+var _difference = _interopRequireDefault(require("./difference"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"src/components/header/index.js"}],"src/containers/headerContainer.js":[function(require,module,exports) {
+},{"./header":"src/components/header/index.js","./difference":"src/components/difference/index.js"}],"src/containers/headerContainer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32284,7 +32448,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function HeaderContainer() {
   return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Title, null, "Bring everyone totgether to build better products."), /*#__PURE__*/_react.default.createElement(_components.Header.Menu, null, "Menu"), /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view."), /*#__PURE__*/_react.default.createElement(_components.Header.Button, null, "Get started"));
 }
-},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/Home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/data/differences.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var differnces = [{
+  title: "Track company-wide progress",
+  text: "See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.",
+  id: "092309123"
+}, {
+  title: "Advanced built-in reports",
+  text: "Set internal delivery estimates and track progress toward company goals. Our customisabl dashboard helps you build out the reports you need to keep key stakeholders informed.",
+  id: "092309"
+}, {
+  title: "Everything you need in one place ",
+  text: "Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.",
+  id: "2309123"
+}];
+var _default = differnces;
+exports.default = _default;
+},{}],"src/containers/differencesContainer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = DifferencesContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+var _differences = _interopRequireDefault(require("../data//differences"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function DifferencesContainer() {
+  return /*#__PURE__*/_react.default.createElement(_components.Difference, null, /*#__PURE__*/_react.default.createElement(_components.Difference.Title, null, "Hello word"), _differences.default.map(function (item) {
+    return /*#__PURE__*/_react.default.createElement(_components.Difference.Section, {
+      key: item.id
+    }, /*#__PURE__*/_react.default.createElement(_components.Difference.SectionTitle, null, item.title), /*#__PURE__*/_react.default.createElement(_components.Difference.Text, null, item.text));
+  }));
+}
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../data//differences":"src/data/differences.js"}],"src/pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32296,12 +32505,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _headerContainer = _interopRequireDefault(require("../containers/headerContainer"));
 
+var _differencesContainer = _interopRequireDefault(require("../containers/differencesContainer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerContainer.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerContainer.default, null), /*#__PURE__*/_react.default.createElement(_differencesContainer.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/headerContainer":"src/containers/headerContainer.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/headerContainer":"src/containers/headerContainer.js","../containers/differencesContainer":"src/containers/differencesContainer.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32358,7 +32569,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51087" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52862" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

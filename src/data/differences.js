@@ -15,3 +15,5 @@ const differnces = [
     id: "2309123",
   }
 ]
+
+export default differnces;
