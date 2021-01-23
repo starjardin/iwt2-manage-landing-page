@@ -32109,7 +32109,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  color : ", ";\n  background-color : ", ";\n  padding: 1rem 1.8rem;\n  border-radius : 26px;\n  border : none;\n  font-weight : ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  color : ", ";\n  background-color : ", ";\n  padding: 1rem 1.8rem;\n  border-radius : 26px;\n  border : none;\n  font-weight : ", ";\n  z-index : 2;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -32139,7 +32139,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  padding : 1rem;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32287,14 +32287,24 @@ Header.Logo = function HeaderLogo(_ref10) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Masthead = exports.SectionTitle = exports.Section = exports.Text = exports.Title = exports.Container = void 0;
+exports.Masthead = exports.SectionTitle = exports.Section = exports.Text = exports.TextAlign = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject6() {
+function _templateObject7() {
   var data = _taggedTemplateLiteral([""]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  font-size : 23px;\n  color : hsl(228, 39%, 23%);\n  background-color : hsl(13, 100%, 96%);\n  font-weight: 700;\n  margin: 0;\n  padding-left : 3rem;\n  transform : translateX(-20px);\n  width : 100%;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -32314,7 +32324,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  margin-bottom : 3rem;\n  font-size : 16px;\n  font-weight : 500;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -32324,7 +32334,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  text-align : ", ";\n  display : ", ";\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32334,7 +32344,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  color : hsl(228, 39%, 23%);\n  font-size: 37px;\n  font-weight: 700;\n  line-height: 63px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32344,7 +32354,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  background-color : hsl(0, 0%, 98%);\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32363,19 +32373,29 @@ var Title = _styledComponents.default.h3(_templateObject2());
 
 exports.Title = Title;
 
-var Text = _styledComponents.default.p(_templateObject3());
+var TextAlign = _styledComponents.default.div(_templateObject3(), function (_ref) {
+  var textAl = _ref.textAl;
+  return textAl;
+}, function (_ref2) {
+  var display = _ref2.display;
+  return display;
+});
+
+exports.TextAlign = TextAlign;
+
+var Text = _styledComponents.default.p(_templateObject4());
 
 exports.Text = Text;
 
-var Section = _styledComponents.default.section(_templateObject4());
+var Section = _styledComponents.default.section(_templateObject5());
 
 exports.Section = Section;
 
-var SectionTitle = _styledComponents.default.h4(_templateObject5());
+var SectionTitle = _styledComponents.default.h4(_templateObject6());
 
 exports.SectionTitle = SectionTitle;
 
-var Masthead = _styledComponents.default.div(_templateObject6());
+var Masthead = _styledComponents.default.div(_templateObject7());
 
 exports.Masthead = Masthead;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/difference/index.js":[function(require,module,exports) {
@@ -32436,6 +32456,13 @@ Difference.SectionTitle = function DifferenceSectionTitle(_ref6) {
       restProps = _objectWithoutProperties(_ref6, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_differenceStyles.SectionTitle, restProps, children, " ");
+};
+
+Difference.TextAlign = function DifferenceTextAlign(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_differenceStyles.TextAlign, restProps, children, " ");
 };
 },{"react":"node_modules/react/index.js","./styles/differenceStyles":"src/components/difference/styles/differenceStyles.js"}],"src/components/work/styles/work.js":[function(require,module,exports) {
 "use strict";
@@ -32980,10 +33007,19 @@ var _differences = _interopRequireDefault(require("../data//differences"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function DifferencesContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Difference, null, /*#__PURE__*/_react.default.createElement(_components.Difference.Title, null, "Hello word"), _differences.default.map(function (item) {
+  return /*#__PURE__*/_react.default.createElement(_components.Difference, null, /*#__PURE__*/_react.default.createElement(_components.Difference.TextAlign, {
+    textAl: "center",
+    display: "block"
+  }, /*#__PURE__*/_react.default.createElement(_components.Difference.Title, null, "What's diffrent about Manager?"), /*#__PURE__*/_react.default.createElement(_components.Difference.Text, null, "Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.")), _differences.default.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement(_components.Difference.Section, {
       key: item.id
-    }, /*#__PURE__*/_react.default.createElement(_components.Difference.SectionTitle, null, item.title), /*#__PURE__*/_react.default.createElement(_components.Difference.Text, null, item.text));
+    }, /*#__PURE__*/_react.default.createElement(_components.Difference.TextAlign, {
+      textAl: "start",
+      display: "flex"
+    }, /*#__PURE__*/_react.default.createElement(_components.Header.Button, {
+      color: "#fff",
+      bg: "hsl(12, 88%, 59%)"
+    }, "0", index + 1), /*#__PURE__*/_react.default.createElement(_components.Difference.SectionTitle, null, item.title)), /*#__PURE__*/_react.default.createElement(_components.Difference.Text, null, item.text));
   }));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js","../data//differences":"src/data/differences.js"}],"src/containers/workContainer.js":[function(require,module,exports) {

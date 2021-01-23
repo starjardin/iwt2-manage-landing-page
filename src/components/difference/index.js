@@ -5,7 +5,8 @@ import {
   Text,
   Section,
   SectionTitle,
-  Masthead
+  Masthead,
+  TextAlign
 } from './styles/differenceStyles'
 
 export default function Difference( { children, ...restProps}) {
@@ -34,4 +35,8 @@ Difference.Masthead = function DifferenceMasthead({ children,...restProps }) {
 
 Difference.SectionTitle = function DifferenceSectionTitle({ children,...restProps }) {
   return <SectionTitle {...restProps}>{ children } </SectionTitle>
+}
+
+Difference.TextAlign = function DifferenceTextAlign({ children,...restProps }) {
+  return <TextAlign {...restProps}>{ children } </TextAlign>
 }
