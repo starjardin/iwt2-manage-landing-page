@@ -32052,11 +32052,21 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Menu = exports.Items = exports.Lists = exports.Navigation = exports.Button = exports.Title = exports.Text = exports.Container = void 0;
+exports.Menu = exports.Logo = exports.Items = exports.Lists = exports.Navigation = exports.Button = exports.Title = exports.Text = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject8() {
   var data = _taggedTemplateLiteral([""]);
@@ -32168,7 +32178,11 @@ var Items = _styledComponents.default.li(_templateObject7());
 
 exports.Items = Items;
 
-var Menu = _styledComponents.default.span(_templateObject8());
+var Logo = _styledComponents.default.img(_templateObject8());
+
+exports.Logo = Logo;
+
+var Menu = _styledComponents.default.span(_templateObject9());
 
 exports.Menu = Menu;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/header/index.js":[function(require,module,exports) {
@@ -32200,7 +32214,7 @@ Header.Logo = function HeaderLogo(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(Logo, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_headerStyles.Logo, restProps, children);
 };
 
 Header.Text = function HeaderText(_ref3) {
@@ -32250,6 +32264,13 @@ Header.Menu = function HeaderMenu(_ref9) {
       restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_headerStyles.Menu, restProps, children);
+};
+
+Header.Logo = function HeaderLogo(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_headerStyles.Logo, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/headerStyles":"src/components/header/styles/headerStyles.js"}],"src/components/difference/styles/differenceStyles.js":[function(require,module,exports) {
 "use strict";
@@ -32407,7 +32428,396 @@ Difference.SectionTitle = function DifferenceSectionTitle(_ref6) {
 
   return /*#__PURE__*/_react.default.createElement(_differenceStyles.SectionTitle, restProps, children, " ");
 };
-},{"react":"node_modules/react/index.js","./styles/differenceStyles":"src/components/difference/styles/differenceStyles.js"}],"src/components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/differenceStyles":"src/components/difference/styles/differenceStyles.js"}],"src/components/work/styles/work.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Button = exports.Profile = exports.Text = exports.Title = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Title = _styledComponents.default.h3(_templateObject2());
+
+exports.Title = Title;
+
+var Text = _styledComponents.default.p(_templateObject3());
+
+exports.Text = Text;
+
+var Profile = _styledComponents.default.img(_templateObject4());
+
+exports.Profile = Profile;
+
+var Button = _styledComponents.default.button(_templateObject5());
+
+exports.Button = Button;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/work/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Work;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _work = require("./styles/work");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Work(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_work.Container, restProps, children);
+}
+
+Work.Title = function WorkTitle(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_work.Title, restProps, children);
+};
+
+Work.Text = function WorkText(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_work.Text, restProps, children);
+};
+
+Work.Profile = function WorkProfile(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_work.Profile, restProps, children);
+};
+
+Work.Button = function WorkButton(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_work.Button, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/work":"src/components/work/styles/work.js"}],"src/components/simplify/styles/simplify.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Title = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Title = _styledComponents.default.h3(_templateObject2());
+
+exports.Title = Title;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/simplify/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Simplify;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _simplify = require("./styles/simplify");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Simplify(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_simplify.Container, restProps, children);
+}
+
+Simplify.Title = function SimplifyTitle(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_simplify.Title, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/simplify":"src/components/simplify/styles/simplify.js"}],"src/components/footer/styles/footerStyles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Icons = exports.Button = exports.Anchor = exports.Items = exports.ListContainer = exports.Navigation = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  display : inline-block;\n  text-decoration : none;\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  color : ", "\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  display : inline-block;\n  text-decoration : none;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  list-style : none;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  padding: 0;\n  margin: 0;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  padding: 0;\n  margin: 0;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  background-color: hsl(228, 39%, 23%);\n  padding: 4rem 2rem;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Navigation = _styledComponents.default.nav(_templateObject2());
+
+exports.Navigation = Navigation;
+
+var ListContainer = _styledComponents.default.ul(_templateObject3());
+
+exports.ListContainer = ListContainer;
+
+var Items = _styledComponents.default.li(_templateObject4());
+
+exports.Items = Items;
+
+var Anchor = _styledComponents.default.a(_templateObject5());
+
+exports.Anchor = Anchor;
+
+var Button = _styledComponents.default.button(_templateObject6(), function (_ref) {
+  var color = _ref.color;
+  return color;
+});
+
+exports.Button = Button;
+
+var Icons = _styledComponents.default.a(_templateObject7());
+
+exports.Icons = Icons;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/footer/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Footer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _footerStyles = require("./styles/footerStyles");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Footer(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.Container, restProps, children);
+}
+
+Footer.Navigation = function FooterNavigation(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.Navigation, restProps, children);
+};
+
+Footer.ListContainer = function FooterListContainer(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.ListContainer, restProps, children);
+};
+
+Footer.Items = function FooterItems(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.Items, restProps, children);
+};
+
+Footer.Button = function FooterButton(_ref5) {
+  var _ref5$color = _ref5.color,
+      color = _ref5$color === void 0 ? "white" : _ref5$color,
+      children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["color", "children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.Button, restProps, children);
+};
+
+Footer.Anchor = function FooterAnchor(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.Anchor, restProps, children);
+};
+
+Footer.Icons = function FooterIcons(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.Icons, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/footerStyles":"src/components/footer/styles/footerStyles.js"}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32425,13 +32835,37 @@ Object.defineProperty(exports, "Difference", {
     return _difference.default;
   }
 });
+Object.defineProperty(exports, "Work", {
+  enumerable: true,
+  get: function () {
+    return _work.default;
+  }
+});
+Object.defineProperty(exports, "Simplify", {
+  enumerable: true,
+  get: function () {
+    return _simplify.default;
+  }
+});
+Object.defineProperty(exports, "Footer", {
+  enumerable: true,
+  get: function () {
+    return _footer.default;
+  }
+});
 
 var _header = _interopRequireDefault(require("./header"));
 
 var _difference = _interopRequireDefault(require("./difference"));
 
+var _work = _interopRequireDefault(require("./work"));
+
+var _simplify = _interopRequireDefault(require("./simplify"));
+
+var _footer = _interopRequireDefault(require("./footer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"src/components/header/index.js","./difference":"src/components/difference/index.js"}],"src/containers/headerContainer.js":[function(require,module,exports) {
+},{"./header":"src/components/header/index.js","./difference":"src/components/difference/index.js","./work":"src/components/work/index.js","./simplify":"src/components/simplify/index.js","./footer":"src/components/footer/index.js"}],"src/containers/headerContainer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32493,7 +32927,78 @@ function DifferencesContainer() {
     }, /*#__PURE__*/_react.default.createElement(_components.Difference.SectionTitle, null, item.title), /*#__PURE__*/_react.default.createElement(_components.Difference.Text, null, item.text));
   }));
 }
-},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../data//differences":"src/data/differences.js"}],"src/pages/Home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../data//differences":"src/data/differences.js"}],"src/containers/workContainer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = WorkContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function WorkContainer() {
+  return /*#__PURE__*/_react.default.createElement(_components.Work, null, /*#__PURE__*/_react.default.createElement(_components.Work.Title, null, " What they've said"), /*#__PURE__*/_react.default.createElement(_components.Work.Text, null, "\u201CWe have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.\u201D"), /*#__PURE__*/_react.default.createElement(_components.Header.Button, null, "Get Started"));
+}
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/containers/simplifyContainer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = SimplifyContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function SimplifyContainer() {
+  return /*#__PURE__*/_react.default.createElement(_components.Simplify, null, /*#__PURE__*/_react.default.createElement(_components.Simplify.Title, null, "Simplifyb how team works today."), /*#__PURE__*/_react.default.createElement(_components.Header.Button, null, "Get started"));
+}
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/containers/footerContainer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = FooterContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var links = ["Home", "Pricing", " Products", "About us", "Careers", "community", "privacy policy"];
+var icons = ["facebook", "Youtube", "twitter", "laskfasd", "instagram"];
+
+function FooterContainer(_ref) {
+  var color = _ref.color;
+  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, null, "Updates in your inbox..."), /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+    color: "red"
+  }, "Go"), /*#__PURE__*/_react.default.createElement(_components.Footer.Navigation, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ListContainer, null, links.map(function (item, index) {
+    return /*#__PURE__*/_react.default.createElement(_components.Footer.Items, {
+      key: index
+    }, /*#__PURE__*/_react.default.createElement(_components.Footer.Anchor, {
+      href: "/".concat(item)
+    }, item));
+  })), /*#__PURE__*/_react.default.createElement(_components.Footer.ListContainer, null, icons.map(function (item, index) {
+    return /*#__PURE__*/_react.default.createElement(_components.Footer.Items, {
+      key: index
+    }, /*#__PURE__*/_react.default.createElement(_components.Footer.Icons, {
+      href: "/".concat(item)
+    }, item));
+  }))), /*#__PURE__*/_react.default.createElement(_components.Header.Logo, {
+    src: "../../images/logo.svg"
+  }));
+}
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32507,12 +33012,18 @@ var _headerContainer = _interopRequireDefault(require("../containers/headerConta
 
 var _differencesContainer = _interopRequireDefault(require("../containers/differencesContainer"));
 
+var _workContainer = _interopRequireDefault(require("../containers/workContainer"));
+
+var _simplifyContainer = _interopRequireDefault(require("../containers/simplifyContainer"));
+
+var _footerContainer = _interopRequireDefault(require("../containers/footerContainer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerContainer.default, null), /*#__PURE__*/_react.default.createElement(_differencesContainer.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_headerContainer.default, null), /*#__PURE__*/_react.default.createElement(_differencesContainer.default, null), /*#__PURE__*/_react.default.createElement(_workContainer.default, null), /*#__PURE__*/_react.default.createElement(_simplifyContainer.default, null), /*#__PURE__*/_react.default.createElement(_footerContainer.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/headerContainer":"src/containers/headerContainer.js","../containers/differencesContainer":"src/containers/differencesContainer.js"}],"src/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/headerContainer":"src/containers/headerContainer.js","../containers/differencesContainer":"src/containers/differencesContainer.js","../containers/workContainer":"src/containers/workContainer.js","../containers/simplifyContainer":"src/containers/simplifyContainer.js","../containers/footerContainer":"src/containers/footerContainer.js"}],"src/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

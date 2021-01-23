@@ -7,7 +7,7 @@ import {
   Navigation,
   Lists ,
   Items,
-  Menu
+  Menu, Logo
  } from './styles/headerStyles'
 export default function Header( {children, ...restProps} ) {
   return (
@@ -47,4 +47,8 @@ Header.Items = function HeaderItems({ children, ...restProps }) {
 
 Header.Menu = function HeaderMenu({ children, ...restProps }) {
   return <Menu {...restProps}>{ children }</Menu>
+}
+
+Header.Logo = function HeaderLogo({ children, ...restProps }) {
+  return <Logo {...restProps}>{ children }</Logo>
 }

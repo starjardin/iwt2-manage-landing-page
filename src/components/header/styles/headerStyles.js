@@ -7,4 +7,5 @@ export const Button = styled.button``
 export const Navigation = styled.nav``
 export const Lists = styled.ul``
 export const Items = styled.li``
+export const Logo = styled.img``
 export const Menu = styled.span``
