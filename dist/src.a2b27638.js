@@ -32641,14 +32641,34 @@ Simplify.Title = function SimplifyTitle(_ref2) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Icons = exports.Button = exports.Anchor = exports.Items = exports.ListContainer = exports.Navigation = exports.Container = void 0;
+exports.Logo = exports.Pane = exports.Icons = exports.Button = exports.Anchor = exports.Items = exports.ListContainer = exports.Navigation = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n  text-align : center;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  gap : 1rem;\n  padding: 0 0 3rem 0;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  display : inline-block;\n  text-decoration : none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display : inline-block;\n  text-decoration : none;\n  span {\n    visibility: hidden;\n  }\n  background-repeat : no-repeat;\n  width :2rem;\n  height: 2rem;\n  background-size : contain;\n  &.facebook {\n    background-image : url('../../../../images/icon-facebook.svg');\n  }\n  &.youtube {\n    background-image : url('../../../../images/icon-youtube.svg');\n  }\n  &.twitter {\n    background-image : url('../../../../images/icon-twitter.svg');\n  }\n  &.pinterest {\n    background-image : url('../../../../images/icon-pinterest.svg');\n  }\n  &.instagram {\n    background-image : url('../../../../images/icon-instagram.svg');\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -32658,7 +32678,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  color : ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  color : ", ";\n  background-color : ", ";\n  padding : 1rem 2rem;\n  border-radius : 30px;\n  border: none;\n  border : 4px solid hsl(228, 39%, 23%);\n  cursor: pointer;\n  &:hover {\n    border : 4px solid ", ";\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -32668,7 +32688,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display : inline-block;\n  text-decoration : none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display : inline-block;\n  text-decoration : none;\n  color: hsl(0, 0%, 98%);\n  font-style: 16px;\n  font-weight: 400;\n  padding: 8px;\n  text-transform :capitalize;\n  border : 3px solid hsl(228, 39%, 23%);\n  \n  &:hover {\n    background-color : hsl(227, 12%, 61%);\n    border-radius : 6px;\n    transition : .3s;\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -32688,7 +32708,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  padding: 0;\n  margin: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding: 0;\n  margin: 0;\n  &:first-child {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  }\n  \n  &:nth-child(2) {\n    display: flex;\n    flex-direction : row;\n    gap : 3rem;\n    justify-content : space-between;\n    padding : 3rem 0;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32708,7 +32728,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-color: hsl(228, 39%, 23%);\n  padding: 4rem 2rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: hsl(228, 39%, 23%);\n  padding: 4rem 2rem;\n  font-style: 16px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32742,6 +32762,12 @@ exports.Anchor = Anchor;
 var Button = _styledComponents.default.button(_templateObject6(), function (_ref) {
   var color = _ref.color;
   return color;
+}, function (_ref2) {
+  var bg = _ref2.bg;
+  return bg;
+}, function (_ref3) {
+  var bg = _ref3.bg;
+  return bg;
 });
 
 exports.Button = Button;
@@ -32749,6 +32775,14 @@ exports.Button = Button;
 var Icons = _styledComponents.default.a(_templateObject7());
 
 exports.Icons = Icons;
+
+var Pane = _styledComponents.default.div(_templateObject8());
+
+exports.Pane = Pane;
+
+var Logo = _styledComponents.default.div(_templateObject9());
+
+exports.Logo = Logo;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/footer/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -32768,8 +32802,12 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function Footer(_ref) {
-  var children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["children"]);
+  var _ref$color = _ref.color,
+      color = _ref$color === void 0 ? "white" : _ref$color,
+      children = _ref.children,
+      _ref$bg = _ref.bg,
+      bg = _ref$bg === void 0 ? "hsl(12, 88%, 59%)" : _ref$bg,
+      restProps = _objectWithoutProperties(_ref, ["color", "children", "bg"]);
 
   return /*#__PURE__*/_react.default.createElement(_footerStyles.Container, restProps, children);
 }
@@ -32781,39 +32819,51 @@ Footer.Navigation = function FooterNavigation(_ref2) {
   return /*#__PURE__*/_react.default.createElement(_footerStyles.Navigation, restProps, children);
 };
 
-Footer.ListContainer = function FooterListContainer(_ref3) {
+Footer.Logo = function FooterLogo(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.Logo, restProps, children);
+};
+
+Footer.Pane = function FooterPane(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_footerStyles.Pane, restProps, children);
+};
+
+Footer.ListContainer = function FooterListContainer(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_footerStyles.ListContainer, restProps, children);
 };
 
-Footer.Items = function FooterItems(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
+Footer.Items = function FooterItems(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_footerStyles.Items, restProps, children);
 };
 
-Footer.Button = function FooterButton(_ref5) {
-  var _ref5$color = _ref5.color,
-      color = _ref5$color === void 0 ? "white" : _ref5$color,
-      children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["color", "children"]);
+Footer.Button = function FooterButton(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_footerStyles.Button, restProps, children);
 };
 
-Footer.Anchor = function FooterAnchor(_ref6) {
-  var children = _ref6.children,
-      restProps = _objectWithoutProperties(_ref6, ["children"]);
+Footer.Anchor = function FooterAnchor(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_footerStyles.Anchor, restProps, children);
 };
 
-Footer.Icons = function FooterIcons(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
+Footer.Icons = function FooterIcons(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_footerStyles.Icons, restProps, children);
 };
@@ -32976,27 +33026,31 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var links = ["Home", "Pricing", " Products", "About us", "Careers", "community", "privacy policy"];
-var icons = ["facebook", "Youtube", "twitter", "laskfasd", "instagram"];
+var icons = ["facebook", "youtube", "twitter", "pinterest", "instagram"];
 
-function FooterContainer(_ref) {
-  var color = _ref.color;
-  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, null, "Updates in your inbox..."), /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
-    color: "red"
-  }, "Go"), /*#__PURE__*/_react.default.createElement(_components.Footer.Navigation, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ListContainer, null, links.map(function (item, index) {
+function FooterContainer() {
+  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Pane, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+    bg: "hsl(0, 0%, 98%)",
+    color: "hsl(227, 12%, 61%)"
+  }, "Updates in your inbox..."), /*#__PURE__*/_react.default.createElement(_components.Footer.Button, {
+    color: "white",
+    bg: "hsl(12, 88%, 59%)"
+  }, "Go")), /*#__PURE__*/_react.default.createElement(_components.Footer.Navigation, null, /*#__PURE__*/_react.default.createElement(_components.Footer.ListContainer, null, links.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement(_components.Footer.Items, {
       key: index
     }, /*#__PURE__*/_react.default.createElement(_components.Footer.Anchor, {
       href: "/".concat(item)
-    }, item));
+    }, /*#__PURE__*/_react.default.createElement("span", null, item)));
   })), /*#__PURE__*/_react.default.createElement(_components.Footer.ListContainer, null, icons.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement(_components.Footer.Items, {
       key: index
     }, /*#__PURE__*/_react.default.createElement(_components.Footer.Icons, {
-      href: "/".concat(item)
-    }, item));
-  }))), /*#__PURE__*/_react.default.createElement(_components.Header.Logo, {
-    src: "../../images/logo.svg"
-  }));
+      href: "/".concat(item),
+      className: "".concat(item)
+    }, /*#__PURE__*/_react.default.createElement("span", null, item)));
+  }))), /*#__PURE__*/_react.default.createElement(_components.Footer.Logo, null, /*#__PURE__*/_react.default.createElement(_components.Header.Logo, {
+    src: "../../images/logo-footer.svg"
+  })));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/pages/Home.js":[function(require,module,exports) {
 "use strict";
