@@ -32109,7 +32109,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  color : ", ";\n  background-color : ", ";\n  padding: 1rem 1.8rem;\n  border-radius : 26px;\n  border : none;\n  font-weight : ", "\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -32162,7 +32162,16 @@ var Title = _styledComponents.default.h2(_templateObject3());
 
 exports.Title = Title;
 
-var Button = _styledComponents.default.button(_templateObject4());
+var Button = _styledComponents.default.button(_templateObject4(), function (_ref) {
+  var color = _ref.color;
+  return color;
+}, function (_ref2) {
+  var bg = _ref2.bg;
+  return bg;
+}, function (_ref3) {
+  var fw = _ref3.fw;
+  return fw;
+});
 
 exports.Button = Button;
 
@@ -32576,7 +32585,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  color : hsl(0, 0%, 98%);\n  font-size : 60px;\n  font-weight : 700;\n  line-height : 75px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32586,7 +32595,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  text-align : center;\n  background-color : hsl(12, 88%, 59%);\n  background-image : url('../../../../images/bg-simplify-section-mobile.svg');\n  background-repeat : no-repeat;\n  padding: 4rem 0;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33009,7 +33018,11 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SimplifyContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Simplify, null, /*#__PURE__*/_react.default.createElement(_components.Simplify.Title, null, "Simplifyb how team works today."), /*#__PURE__*/_react.default.createElement(_components.Header.Button, null, "Get started"));
+  return /*#__PURE__*/_react.default.createElement(_components.Simplify, null, /*#__PURE__*/_react.default.createElement(_components.Simplify.Title, null, "Simplify how your team works today."), /*#__PURE__*/_react.default.createElement(_components.Header.Button, {
+    bg: "hsl(0, 0%, 98%)",
+    color: "hsl(12, 88%, 59%)",
+    fw: "700"
+  }, "Get started"));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/containers/footerContainer.js":[function(require,module,exports) {
 "use strict";

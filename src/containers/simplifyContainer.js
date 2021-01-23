@@ -5,9 +5,13 @@ export default function SimplifyContainer() {
   return (
     <Simplify>
       <Simplify.Title>
-        Simplifyb how team works today.
+        Simplify how your team works today.
       </Simplify.Title>
-      <Header.Button>
+      <Header.Button
+        bg="hsl(0, 0%, 98%)"
+        color="hsl(12, 88%, 59%)"
+        fw="700"
+      >
         Get started
       </Header.Button>
     </Simplify>

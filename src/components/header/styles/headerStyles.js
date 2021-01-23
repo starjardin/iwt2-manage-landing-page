@@ -3,7 +3,14 @@ import styled from 'styled-components'
 export const Container = styled.div``
 export const Text = styled.p``
 export const Title = styled.h2``
-export const Button = styled.button``
+export const Button = styled.button`
+  color : ${({ color }) => color};
+  background-color : ${({ bg }) => bg};
+  padding: 1rem 1.8rem;
+  border-radius : 26px;
+  border : none;
+  font-weight : ${({fw}) => fw}
+`
 export const Navigation = styled.nav``
 export const Lists = styled.ul``
 export const Items = styled.li``
