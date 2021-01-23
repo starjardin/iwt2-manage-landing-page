@@ -5,7 +5,6 @@ import {
   Title,
   Text,
   Profile,
-  Button  
 } from "./styles/work"
 
 export default function Work({ children,...restProps }) {
@@ -24,8 +23,4 @@ Work.Text = function WorkText({ children,...restProps }) {
 
 Work.Profile = function WorkProfile({ children,...restProps }) {
   return <Profile { ...restProps }>{ children }</Profile>
-}
-
-Work.Button = function WorkButton({ children,...restProps }) {
-  return <Button { ...restProps }>{ children }</Button>
 }

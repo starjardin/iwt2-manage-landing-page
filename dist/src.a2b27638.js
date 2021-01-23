@@ -32470,24 +32470,14 @@ Difference.TextAlign = function DifferenceTextAlign(_ref7) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = exports.Profile = exports.Text = exports.Title = exports.Container = void 0;
+exports.Profile = exports.Text = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject5() {
-  var data = _taggedTemplateLiteral([""]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  position : absolute;\n  top : -50%;\n  transform : translate(-50%);\n  left : 50%;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -32497,7 +32487,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  background-color : hsl(0, 0%, 98%);\n  padding : 5rem 2rem 3rem 2rem;\n  position : relative;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32507,7 +32497,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-size : 34px;\n  line-height : 63px;\n  font-weight : 700;\n  color : hsl(228, 39%, 23%);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32517,7 +32507,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  text-align : center;\n  background-color : hsl(0, 0%, 100%);\n  padding : 2rem 0;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32543,10 +32533,6 @@ exports.Text = Text;
 var Profile = _styledComponents.default.img(_templateObject4());
 
 exports.Profile = Profile;
-
-var Button = _styledComponents.default.button(_templateObject5());
-
-exports.Button = Button;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/work/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -32591,13 +32577,6 @@ Work.Profile = function WorkProfile(_ref4) {
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_work.Profile, restProps, children);
-};
-
-Work.Button = function WorkButton(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
-
-  return /*#__PURE__*/_react.default.createElement(_work.Button, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/work":"src/components/work/styles/work.js"}],"src/components/simplify/styles/simplify.js":[function(require,module,exports) {
 "use strict";
@@ -33037,7 +33016,12 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function WorkContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Work, null, /*#__PURE__*/_react.default.createElement(_components.Work.Title, null, " What they've said"), /*#__PURE__*/_react.default.createElement(_components.Work.Text, null, "\u201CWe have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.\u201D"), /*#__PURE__*/_react.default.createElement(_components.Header.Button, null, "Get Started"));
+  return /*#__PURE__*/_react.default.createElement(_components.Work, null, /*#__PURE__*/_react.default.createElement(_components.Work.Title, null, " What they've said"), /*#__PURE__*/_react.default.createElement(_components.Work.Text, null, "\u201CWe have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.\u201D", /*#__PURE__*/_react.default.createElement(_components.Work.Profile, {
+    src: "../../images/avatar-ali.png"
+  })), /*#__PURE__*/_react.default.createElement(_components.Header.Button, {
+    color: "#fff",
+    bg: "hsl(12, 88%, 59%)"
+  }, "Get Started"));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/containers/simplifyContainer.js":[function(require,module,exports) {
 "use strict";
