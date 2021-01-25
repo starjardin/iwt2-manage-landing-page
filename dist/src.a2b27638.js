@@ -32052,14 +32052,24 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Menu = exports.Logo = exports.Items = exports.Lists = exports.Navigation = exports.Button = exports.Title = exports.Text = exports.Container = void 0;
+exports.Frame = exports.Menu = exports.Logo = exports.Items = exports.Lists = exports.Navigation = exports.Button = exports.Title = exports.Text = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content : space-between;\n  align-items : center;\n  background-image : \n    url('../../../../images/illustration-intro.svg'),\n    url('../../../../images/bg-tablet-pattern.svg');\n  padding-bottom : 28rem;\n  background-position-y : 50% 50%;\n  background-repeat : no-repeat;\n  background-size : contain;\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject9() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -32109,7 +32119,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  color : ", ";\n  background-color : ", ";\n  padding: 1rem 1.8rem;\n  border-radius : 26px;\n  border : none;\n  font-weight : ", ";\n  z-index : 2;\n"]);
+  var data = _taggedTemplateLiteral(["\n  color : ", ";\n  background-color : ", ";\n  padding: 1rem 1.8rem;\n  border-radius : 26px;\n  border : none;\n  font-weight : ", ";\n  z-index : 2;\n  cursor : pointer;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -32119,7 +32129,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  color : hsl(228, 39%, 23%);\n  font-weight : bolder;\n  font-size : 54px;\n  line-height : 72px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32129,7 +32139,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  color : hsl(227, 12%, 61%);\n  font-size : 16px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32139,7 +32149,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  padding : 1rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding : 1rem;\n  text-align : center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32194,6 +32204,10 @@ exports.Logo = Logo;
 var Menu = _styledComponents.default.span(_templateObject9());
 
 exports.Menu = Menu;
+
+var Frame = _styledComponents.default.div(_templateObject10());
+
+exports.Frame = Frame;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/header/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -32280,6 +32294,13 @@ Header.Logo = function HeaderLogo(_ref10) {
       restProps = _objectWithoutProperties(_ref10, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_headerStyles.Logo, restProps, children);
+};
+
+Header.Frame = function HeaderFrame(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_headerStyles.Frame, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/headerStyles":"src/components/header/styles/headerStyles.js"}],"src/components/difference/styles/differenceStyles.js":[function(require,module,exports) {
 "use strict";
@@ -32938,14 +32959,44 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = HeaderContainer;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _components = require("../components");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function HeaderContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Title, null, "Bring everyone totgether to build better products."), /*#__PURE__*/_react.default.createElement(_components.Header.Menu, null, "Menu"), /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view."), /*#__PURE__*/_react.default.createElement(_components.Header.Button, null, "Get started"));
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      isMenuOpen = _useState2[0],
+      setIsMenuOpen = _useState2[1];
+
+  console.log(isMenuOpen);
+  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Header.Logo, {
+    src: "../../images/logo.svg"
+  }), /*#__PURE__*/_react.default.createElement(_components.Header.Menu, {
+    onClick: function onClick() {
+      return setIsMenuOpen(!isMenuOpen);
+    }
+  }, "Menu")), isMenuOpen && /*#__PURE__*/_react.default.createElement(_components.Header.Navigation, null), /*#__PURE__*/_react.default.createElement(_components.Header.Title, null, "Bring everyone totgether to build better products."), /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view."), /*#__PURE__*/_react.default.createElement(_components.Header.Button, {
+    color: "#fff",
+    bg: "hsl(12, 88%, 59%)",
+    fw: "700"
+  }, "Get started"));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/data/differences.js":[function(require,module,exports) {
 "use strict";
@@ -33167,7 +33218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52862" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63759" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

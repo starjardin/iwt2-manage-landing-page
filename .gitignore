@@ -12,6 +12,6 @@
 *.fig
 
 # Avoid your project being littered with annoying .DS_Store files!
+.cache
 .DS_Store
 /node_modules
-.cache
