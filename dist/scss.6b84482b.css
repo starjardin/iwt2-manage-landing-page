@@ -1,6 +1,93 @@
 .footer {
   background-color: #242d52;
+  padding: 4rem 2rem;
+}
+
+.footer, .anchor {
   color: #fafafa;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.items-container {
+  padding: 0;
+}
+
+.text-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.item {
+  list-style: none;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.anchor {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.anchor span {
+  visibility: collapse;
+}
+
+.icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.facebook {
+  background-image: url("/icon-facebook.db88fd38.svg");
+}
+
+.pinterest {
+  background-image: url("/icon-pinterest.6b47e241.svg");
+}
+
+.youtube {
+  background-image: url("/icon-youtube.8e30d3e6.svg");
+}
+
+.twitter {
+  background-image: url("/icon-twitter.9dcd00ee.svg");
+}
+
+.instagram {
+  background-image: url("/icon-instagram.55128b72.svg");
+}
+
+.button-container {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #f25f3a;
+}
+
+.bg-white {
+  background-color: #fafafa;
+  color: #9095a7;
 }
 
 /*# sourceMappingURL=/scss.6b84482b.css.map */

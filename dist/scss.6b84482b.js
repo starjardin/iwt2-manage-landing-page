@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\images\\icon-facebook.svg":[["icon-facebook.db88fd38.svg","images/icon-facebook.svg"],"images/icon-facebook.svg"],"./..\\images\\icon-pinterest.svg":[["icon-pinterest.6b47e241.svg","images/icon-pinterest.svg"],"images/icon-pinterest.svg"],"./..\\images\\icon-youtube.svg":[["icon-youtube.8e30d3e6.svg","images/icon-youtube.svg"],"images/icon-youtube.svg"],"./..\\images\\icon-twitter.svg":[["icon-twitter.9dcd00ee.svg","images/icon-twitter.svg"],"images/icon-twitter.svg"],"./..\\images\\icon-instagram.svg":[["icon-instagram.55128b72.svg","images/icon-instagram.svg"],"images/icon-instagram.svg"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53916" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51424" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
