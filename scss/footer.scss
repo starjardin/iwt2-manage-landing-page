@@ -1,5 +1,7 @@
+@import 'variables.scss';
+
 .footer {
-  background-color: hsl(228, 39%, 23%);
+  background-color: $very-dark-blue;
   padding: 4rem 2rem;
 }
 
@@ -38,7 +40,10 @@
 
 .anchor {
   text-decoration: none;
+  font-size: 22px;
+  line-height: 44px;
   text-transform: capitalize;
+  padding-block: 1rem;
   span {
     visibility: collapse;
   }
@@ -75,14 +80,6 @@
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
-}
-
-.btn {
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 20px;
-  color: #ffffff;
-  background-color: hsl(12, 88%, 59%);
 }
 
 .bg-white {
