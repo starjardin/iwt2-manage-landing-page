@@ -255,15 +255,35 @@ label span {
 
 .work-paragraph {
   width: 90%;
-  margin: auto;
+  margin-inline: auto;
   padding-top: 9rem;
-  background-color: #b3b3b3;
+  background-color: #e6e6e6;
   color: #9095a7;
   font-size: 16px;
   line-height: 32px;
   font-weight: normal;
 }
+.work-paragraph span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 44px;
+  font-style: normal;
+}
 
+@media (min-width: 700px) {
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    overflow: hidden;
+  }
+
+  .work-card:last-of-type {
+    display: none;
+  }
+}
 .simplify {
   text-align: center;
   background-color: #f25f3a;
