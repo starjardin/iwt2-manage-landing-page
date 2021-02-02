@@ -1,3 +1,21 @@
+.section-difference .container {
+  background-color: #fafafa;
+}
+.section-difference .section-difference-heading {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+.section-difference .section-difference-heading h4 {
+  background-color: #ffefeb;
+  width: 100%;
+  padding: 1rem 0 1rem 2.5rem;
+  transform: translateX(-20px);
+  position: initial;
+  z-index: 3;
+}
+
 .footer {
   background-color: #242d52;
   padding: 4rem 2rem;
