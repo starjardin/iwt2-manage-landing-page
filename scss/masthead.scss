@@ -1,0 +1,33 @@
+//Bright Red: hsl(12, 88%, 59%)
+//Dark Blue: hsl(228, 39%, 23%)
+//Dark Grayish Blue: hsl(227, 12%, 61%)
+//Very Dark Blue: hsl(233, 12%, 13%)
+//Very Pale Red: hsl(13, 100%, 96%)
+//Vary Light Gray: hsl(0, 0%, 98%)
+
+.masthead {
+  background-color: hsl(0, 0%, 98%);
+  margin: 0;
+  padding: 4rem 0 6rem 0;
+}
+
+.masthead-container {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+.masthead-heading {
+  font-size: 43px;
+  line-height: 55px;
+  font-weight: 900;
+  color: hsl(228, 39%, 23%);
+}
+
+.masthead-paragraph {
+  color: hsl(227, 12%, 61%);
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1;
+  padding-block: 2rem;
+}
