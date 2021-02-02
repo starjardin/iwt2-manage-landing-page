@@ -371,11 +371,37 @@ label span {
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .bg-white {
   background-color: #fafafa;
   color: #9095a7;
+}
+
+@media (min-width: 700px) {
+  .footer .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .icons-container {
+    max-width: max-content;
+    gap: 1.3rem;
+  }
+
+  .footer-logo-icons {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    padding-top: 2rem;
+  }
 }
 
 /*# sourceMappingURL=/scss.6b84482b.css.map */

@@ -80,9 +80,36 @@
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .bg-white {
   background-color: hsl(0, 0%, 98%);
   color: hsl(227, 12%, 61%);
+}
+
+@media (min-width : $min-width) {
+  .footer {
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
+  
+  .icons-container {
+    max-width: max-content;
+    gap: 1.3rem;
+  }
+  .footer-logo-icons {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  
+  .footer-logo {
+    padding-top : 2rem;
+  }
 }
