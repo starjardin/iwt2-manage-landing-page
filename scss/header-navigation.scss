@@ -11,10 +11,14 @@
   display: none;
 }
 
+[type="checkbox"] {
+  visibility: hidden;
+}
+
 [type="checkbox"]:checked ~ .navigation {
   position: absolute;
   display: block;
-  top: 3rem;
+  top: 10%;
   width: 90%;
   left: 50%;
   transform: translateX(-50%);
@@ -27,12 +31,22 @@
     text-align: center;
     a {
       text-decoration: none;
-      color: hsl(228, 39%, 23%);
+      color: $dark-blue;
       font-weight: 900;
       font-size: 21px;
       display: inline-block;
       line-height: 52px;
     }
+  }
+}
+
+label {
+  background-image: url('../images/menu.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  span {
+    visibility: hidden;
   }
 }
 
@@ -46,4 +60,9 @@
   bottom: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('../images/icon-close.svg');
+  background-position: 90% 2rem;
+  background-repeat: no-repeat;
+  background-size: 2rem 2rem;
+  cursor: pointer;
 }

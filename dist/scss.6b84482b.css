@@ -69,10 +69,14 @@ p {
   display: none;
 }
 
+[type=checkbox] {
+  visibility: hidden;
+}
+
 [type=checkbox]:checked ~ .navigation {
   position: absolute;
   display: block;
-  top: 3rem;
+  top: 10%;
   width: 90%;
   left: 50%;
   transform: translateX(-50%);
@@ -93,6 +97,16 @@ p {
   line-height: 52px;
 }
 
+label {
+  background-image: url("/menu.2b71b4ce.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+label span {
+  visibility: hidden;
+}
+
 [type=checkbox]:checked ~ label {
   width: 100vw;
   height: 100vh;
@@ -103,6 +117,11 @@ p {
   bottom: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("/icon-close.1add023a.svg");
+  background-position: 90% 2rem;
+  background-repeat: no-repeat;
+  background-size: 2rem 2rem;
+  cursor: pointer;
 }
 
 .section-difference {
