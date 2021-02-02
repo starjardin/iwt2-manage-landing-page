@@ -291,6 +291,20 @@ label span {
   color: #f25f3a;
 }
 
+@media (min-width: 700px) {
+  .simplify-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+  }
+
+  .simplify-heading {
+    max-width: 700px;
+    text-align: start;
+    padding-block: 0;
+  }
+}
 .footer {
   background-color: #1d1e25;
   padding: 4rem 2rem;

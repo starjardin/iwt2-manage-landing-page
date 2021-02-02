@@ -13,7 +13,7 @@
 }
 
 .simplify-heading {
-  color : hsl(0, 0%, 98%);
+  color : $vary-light-gray;
   font-size : 60px;
   font-weight : 700;
   line-height : 75px;
@@ -23,6 +23,21 @@
 }
 
 .btn.simplify-button {
-  background-color: hsl(0, 0%, 98%);
-  color: hsl(12, 88%, 59%);
+  background-color: $vary-light-gray;
+  color: $bright-red;
 }
+
+@media (min-width : $min-width) {
+  .simplify-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+  }
+  .simplify-heading {
+    max-width: 700px;
+    text-align: start;
+    padding-block : 0;
+  }
+}
+
