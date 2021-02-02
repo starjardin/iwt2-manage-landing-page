@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\bg-simplify-section-mobile.svg":[["bg-simplify-section-mobile.9f7955ac.svg","images/bg-simplify-section-mobile.svg"],"images/bg-simplify-section-mobile.svg"],"./..\\images\\icon-facebook.svg":[["icon-facebook.db88fd38.svg","images/icon-facebook.svg"],"images/icon-facebook.svg"],"./..\\images\\icon-pinterest.svg":[["icon-pinterest.6b47e241.svg","images/icon-pinterest.svg"],"images/icon-pinterest.svg"],"./..\\images\\icon-youtube.svg":[["icon-youtube.8e30d3e6.svg","images/icon-youtube.svg"],"images/icon-youtube.svg"],"./..\\images\\icon-twitter.svg":[["icon-twitter.9dcd00ee.svg","images/icon-twitter.svg"],"images/icon-twitter.svg"],"./..\\images\\icon-instagram.svg":[["icon-instagram.55128b72.svg","images/icon-instagram.svg"],"images/icon-instagram.svg"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\images\\bg-tablet-pattern.svg":[["bg-tablet-pattern.7e77589d.svg","images/bg-tablet-pattern.svg"],"images/bg-tablet-pattern.svg"],"./..\\images\\illustration-intro.svg":[["illustration-intro.1ae4e850.svg","images/illustration-intro.svg"],"images/illustration-intro.svg"],"./..\\images\\bg-simplify-section-mobile.svg":[["bg-simplify-section-mobile.9f7955ac.svg","images/bg-simplify-section-mobile.svg"],"images/bg-simplify-section-mobile.svg"],"./..\\images\\icon-facebook.svg":[["icon-facebook.db88fd38.svg","images/icon-facebook.svg"],"images/icon-facebook.svg"],"./..\\images\\icon-pinterest.svg":[["icon-pinterest.6b47e241.svg","images/icon-pinterest.svg"],"images/icon-pinterest.svg"],"./..\\images\\icon-youtube.svg":[["icon-youtube.8e30d3e6.svg","images/icon-youtube.svg"],"images/icon-youtube.svg"],"./..\\images\\icon-twitter.svg":[["icon-twitter.9dcd00ee.svg","images/icon-twitter.svg"],"images/icon-twitter.svg"],"./..\\images\\icon-instagram.svg":[["icon-instagram.55128b72.svg","images/icon-instagram.svg"],"images/icon-instagram.svg"],"_css_loader":"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60697" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56778" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

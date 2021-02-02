@@ -1,3 +1,67 @@
+.header, .header-container {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header {
+  background-color: #fafafa;
+  background-image: url("/bg-tablet-pattern.7e77589d.svg");
+  background-position: 3rem -5rem;
+}
+
+.header-container {
+  background-image: url("/illustration-intro.1ae4e850.svg");
+  padding-bottom: 100%;
+  background-position: center 6rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: none;
+}
+
+[type=checkbox]:checked ~ .navigation {
+  position: absolute;
+  display: block;
+  top: 3rem;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+[type=checkbox]:checked ~ .navigation .navigation-lists {
+  background-color: #fefefefe;
+  list-style: none;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+[type=checkbox]:checked ~ .navigation .navigation-lists a {
+  text-decoration: none;
+  color: #242d52;
+  font-weight: 900;
+  font-size: 21px;
+  display: inline-block;
+  line-height: 52px;
+}
+
+[type=checkbox]:checked ~ label {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .section-difference .container {
   background-color: #fafafa;
 }
