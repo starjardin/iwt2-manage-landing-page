@@ -26,3 +26,17 @@
   line-height: 1;
   padding-block: 2rem;
 }
+
+@media (min-width : $min-width) {
+  .masthead-container {
+    text-align: start;
+    margin: 0;
+  }
+  
+  .masthead {
+    background-image: url('../images/illustration-intro.svg'), url('../images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+}

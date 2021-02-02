@@ -16,3 +16,13 @@
   padding-bottom: 100%;
   background-position: center 6rem;
 }
+
+@media (min-width : $min-width) {
+  .header {
+    background: none;
+  }
+  .header-container {
+    background: none;
+    padding-bottom: 0;
+  }
+}

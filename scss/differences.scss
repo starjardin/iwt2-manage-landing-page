@@ -34,3 +34,23 @@
     }
   }
 }
+
+@media (min-width : $min-width) {
+  .section-difference {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .differnce-header {
+      max-width: 60%;
+      text-align: start;
+      
+      .differnce-subheading {
+        background-color: none;
+      }
+    }
+    
+  }
+  
+}

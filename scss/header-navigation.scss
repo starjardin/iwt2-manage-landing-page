@@ -66,3 +66,31 @@ label {
   background-size: 2rem 2rem;
   cursor: pointer;
 }
+
+.head-button {
+  display: none;
+}
+
+@media (min-width : 700px) {
+  .navigation {
+    display: block;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style: none;
+      gap: 3rem;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .head-button {
+    display: block;
+  }
+  
+  label {
+    display: none;
+  }
+}
