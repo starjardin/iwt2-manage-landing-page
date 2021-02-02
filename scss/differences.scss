@@ -1,14 +1,30 @@
+@import 'variables.scss';
+
 .section-difference {
+  margin-block: 0;
   .container {
     background-color: hsl(0, 0%, 98%);
   }
   
-  .section-difference-heading {
+  .differnce-heading {
+    margin: 0;
+    color : hsl(228, 39%, 23%);
+    font-size: 30px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 55px; 
+  }
+  
+  .differnce-header {
+    text-align: center;
+  }
+  
+  .difference-subheader {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
-    h4 {
+    .differnce-subheading {
       background-color: hsl(13, 100%, 96%);
       width: 100%;
       padding: 1rem 0 1rem 2.5rem;

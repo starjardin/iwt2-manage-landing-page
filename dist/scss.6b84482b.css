@@ -1,3 +1,19 @@
+button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #f25f3a;
+  z-index: 3;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 29px;
+}
+
 .header, .header-container {
   background-repeat: no-repeat;
   background-size: contain;
@@ -89,16 +105,30 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.section-difference {
+  margin-block: 0;
+}
 .section-difference .container {
   background-color: #fafafa;
 }
-.section-difference .section-difference-heading {
+.section-difference .differnce-heading {
+  margin: 0;
+  color: #242d52;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 55px;
+}
+.section-difference .differnce-header {
+  text-align: center;
+}
+.section-difference .difference-subheader {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
 }
-.section-difference .section-difference-heading h4 {
+.section-difference .difference-subheader .differnce-subheading {
   background-color: #ffefeb;
   width: 100%;
   padding: 1rem 0 1rem 2.5rem;
@@ -132,12 +162,12 @@
 
 .work-card {
   position: relative;
-  margin-block: 1rem;
+  margin-block: 6rem;
 }
 .work-card img {
   position: absolute;
   left: 50%;
-  top: -1rem;
+  top: -5rem;
   transform: translateX(-50%);
 }
 
@@ -180,7 +210,7 @@
 }
 
 .footer {
-  background-color: #242d52;
+  background-color: #1d1e25;
   padding: 4rem 2rem;
 }
 
@@ -218,7 +248,10 @@
 
 .anchor {
   text-decoration: none;
+  font-size: 22px;
+  line-height: 44px;
   text-transform: capitalize;
+  padding-block: 1rem;
 }
 .anchor span {
   visibility: collapse;
@@ -256,14 +289,6 @@
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
-}
-
-.btn {
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 20px;
-  color: #ffffff;
-  background-color: #f25f3a;
 }
 
 .bg-white {

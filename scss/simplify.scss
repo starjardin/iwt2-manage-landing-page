@@ -1,6 +1,8 @@
+@import 'variables.scss';
+
 .simplify {
   text-align : center;
-  background-color : hsl(12, 88%, 59%);
+  background-color : $bright-red;
 }
 
 .simplify-container {

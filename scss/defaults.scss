@@ -1,0 +1,18 @@
+@import 'variables.scss';
+
+button {
+  padding: $btn-padding-block 1.6rem;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: $bright-red;
+  z-index: 3;
+}
+
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 29px;
+}
