@@ -16,6 +16,33 @@
   z-index: 3;
 }
 
+.simplify {
+  text-align: center;
+  background-color: #f25f3a;
+}
+
+.simplify-container {
+  text-align: center;
+  background-image: url("/bg-simplify-section-mobile.9f7955ac.svg");
+  background-repeat: no-repeat;
+  padding: 4rem 0;
+}
+
+.simplify-heading {
+  color: #fafafa;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 75px;
+  max-width: 500px;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.btn.simplify-button {
+  background-color: #fafafa;
+  color: #f25f3a;
+}
+
 .footer {
   background-color: #242d52;
   padding: 4rem 2rem;
