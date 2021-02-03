@@ -273,15 +273,14 @@ label span {
 
 @media (min-width: 700px) {
   .cards-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-    overflow: hidden;
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    overflow: auto;
   }
 
-  .work-card:last-of-type {
-    display: none;
+  .work-card {
+    min-width: 450px;
   }
 }
 .simplify {
