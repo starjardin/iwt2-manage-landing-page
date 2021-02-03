@@ -6,7 +6,7 @@
     background-color: hsl(0, 0%, 98%);
   }
   
-  .differnce-heading {
+  .difference-heading {
     margin: 0;
     color : hsl(228, 39%, 23%);
     font-size: 30px;
@@ -15,7 +15,7 @@
     line-height: 55px; 
   }
   
-  .differnce-header {
+  .difference-header {
     text-align: center;
   }
   
@@ -24,7 +24,7 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
-    .differnce-subheading {
+    .difference-subheading {
       background-color: hsl(13, 100%, 96%);
       width: 100%;
       padding: 1rem 0 1rem 2.5rem;
@@ -40,15 +40,16 @@
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      background: none;
     }
     
-    .differnce-header {
+    .difference-header {
       max-width: 60%;
       text-align: start;
-      
-      .differnce-subheading {
-        background-color: none;
-      }
+    }
+    
+    .difference-subheader > .difference-subheading {
+      background: none;
     }
   }
 }

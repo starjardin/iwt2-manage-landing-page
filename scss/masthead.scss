@@ -34,9 +34,12 @@
   }
   
   .masthead {
-    background-image: url('../images/illustration-intro.svg'), url('../images/bg-tablet-pattern.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+    background: none;
+    .container {
+      background-image: url('../images/illustration-intro.svg'), url('../images/bg-tablet-pattern.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right;
+    }
   }
 }

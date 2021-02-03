@@ -16,3 +16,10 @@ p {
   font-style: normal;
   line-height: 29px;
 }
+
+@media (min-width : $min-width) {
+  .container {
+    max-width: 1220px;
+    margin: auto;
+  }
+}
