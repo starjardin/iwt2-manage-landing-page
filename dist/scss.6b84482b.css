@@ -275,8 +275,8 @@ label span {
   .cards-container {
     display: grid;
     grid-gap: 10px;
-    grid-auto-flow: column;
     overflow: auto;
+    grid-auto-flow: column;
   }
 
   .work-card {
