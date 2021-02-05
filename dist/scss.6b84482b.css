@@ -5,6 +5,19 @@ button {
   color: #ffffff;
   background-color: #f25f3a;
   z-index: 3;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 1px 5px 10px #f25f3a;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:focus {
+  outline: none;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
 }
 
 p {
@@ -370,6 +383,7 @@ label span {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  column-gap: 1.3rem;
 }
 
 .item {
@@ -381,6 +395,7 @@ label span {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  margin: 0;
 }
 
 .anchor {
@@ -432,6 +447,7 @@ label span {
 .bg-white {
   background-color: #fafafa;
   color: #9095a7;
+  box-shadow: 2px 2px 5px #fafafa;
 }
 
 @media (min-width: 700px) {
@@ -446,6 +462,7 @@ label span {
   .icons-container {
     max-width: max-content;
     gap: 1.3rem;
+    margin: 0;
   }
 
   .footer-logo-icons {

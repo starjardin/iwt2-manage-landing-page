@@ -7,8 +7,21 @@ button {
   color: #ffffff;
   background-color: $bright-red;
   z-index: 3;
+  cursor: pointer;
+  transition: .2s;
+  box-shadow: 1px 5px 10px $bright-red;
 }
 
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:focus {
+  outline: none;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+}
 
 p {
   font-size: 16px;
