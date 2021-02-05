@@ -93,16 +93,18 @@ p {
 .header-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-}
-
-.navigation {
-  display: none;
 }
 
 [type=checkbox] {
   visibility: hidden;
+}
+
+[type=checkbox] ~ .navigation {
+  transform: translateX(-555%);
+  transition: 0.5s;
+  order: 2;
 }
 
 [type=checkbox]:checked ~ .navigation {
@@ -134,6 +136,8 @@ label {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  cursor: pointer;
+  order: 3;
 }
 label span {
   visibility: hidden;
@@ -153,6 +157,7 @@ label span {
   background-position: 90% 2rem;
   background-repeat: no-repeat;
   background-size: 2rem 2rem;
+  transition: 0.5s;
   cursor: pointer;
 }
 
@@ -161,22 +166,23 @@ label span {
 }
 
 @media (min-width: 700px) {
-  .navigation {
-    display: block;
+  [type=checkbox] ~ .navigation {
+    transform: none;
   }
-  .navigation ul {
+  [type=checkbox] ~ .navigation ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
     gap: 3rem;
   }
-  .navigation ul a {
+  [type=checkbox] ~ .navigation ul a {
     text-decoration: none;
   }
 
   .head-button {
     display: block;
+    order: 3;
   }
 
   label {
