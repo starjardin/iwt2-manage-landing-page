@@ -52,7 +52,7 @@ p {
 
 @media (min-width: 700px) {
   .header {
-    background: none;
+    background-image: url("/bg-tablet-pattern.7e77589d.svg");
   }
 
   .header-container {
@@ -94,10 +94,13 @@ p {
   }
 
   .masthead {
-    background: none;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
   }
   .masthead .container {
-    background-image: url("/illustration-intro.1ae4e850.svg"), url("/bg-tablet-pattern.7e77589d.svg");
+    background-image: url("/illustration-intro.1ae4e850.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
@@ -135,13 +138,19 @@ p {
   padding: 3rem 1rem;
   text-align: center;
 }
-[type=checkbox]:checked ~ .navigation .navigation-lists a {
+
+.navigation-item {
   text-decoration: none;
   color: #242d52;
-  font-weight: 900;
+  font-weight: bold;
   font-size: 21px;
   display: inline-block;
   line-height: 52px;
+  transition: 0.3s;
+}
+
+.navigation-item:hover {
+  color: #9095a7;
 }
 
 label {
@@ -404,9 +413,14 @@ label span {
   line-height: 44px;
   text-transform: capitalize;
   padding-block: 1rem;
+  transition: 0.3s;
 }
 .anchor span {
   visibility: collapse;
+}
+
+.anchor:hover {
+  color: #f25f3a;
 }
 
 .icon {
@@ -421,20 +435,40 @@ label span {
   background-image: url("/icon-facebook.db88fd38.svg");
 }
 
+.facebook:hover {
+  background-image: url("/icon-facebook-hover.2984770a.svg");
+}
+
 .pinterest {
   background-image: url("/icon-pinterest.6b47e241.svg");
+}
+
+.pinterest:hover {
+  background-image: url("/icon-pinterest-hover.26a97fdc.svg");
 }
 
 .youtube {
   background-image: url("/icon-youtube.8e30d3e6.svg");
 }
 
+.youtube:hover {
+  background-image: url("/icon-youtube-hover.234882ee.svg");
+}
+
 .twitter {
   background-image: url("/icon-twitter.9dcd00ee.svg");
 }
 
+.twitter:hover {
+  background-image: url("/icon-twitter-hover.ed5fed06.svg");
+}
+
 .instagram {
   background-image: url("/icon-instagram.55128b72.svg");
+}
+
+.instagram:hover {
+  background-image: url("/icon-instagram-hover.54d53e02.svg");
 }
 
 .button-container {
@@ -447,10 +481,27 @@ label span {
 .bg-white {
   background-color: #fafafa;
   color: #9095a7;
-  box-shadow: 2px 2px 5px #fafafa;
+  border-radius: 25px;
+  padding-inline-start: 1rem;
+  padding-inline-end: 2.5rem;
+  padding-block: 0.7rem;
+}
+
+.bg-white:focus {
+  border: 2px solid #f25f3a;
+  box-shadow: 2px 2px 5px #f25f3a;
+  color: #f25f3a;
+}
+
+.copy-right {
+  display: none;
 }
 
 @media (min-width: 700px) {
+  .copy-right {
+    display: block;
+  }
+
   .footer .container {
     display: flex;
     flex-direction: row-reverse;

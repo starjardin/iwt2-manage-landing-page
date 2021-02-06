@@ -46,9 +46,14 @@
   line-height: 44px;
   text-transform: capitalize;
   padding-block: 1rem;
+  transition: .3s;
   span {
     visibility: collapse;
   }
+}
+
+.anchor:hover {
+  color: $bright-red;
 }
 
 .icon {
@@ -62,20 +67,35 @@
 .facebook {
   background-image: url('../images/icon-facebook.svg');
 }
+.facebook:hover {
+  background-image: url('../images/icon-facebook-hover.svg');
+}
 
 .pinterest {
   background-image: url('../images/icon-pinterest.svg');
+}
+.pinterest:hover {
+  background-image: url('../images/icon-pinterest-hover.svg');
 }
 
 .youtube {
   background-image: url('../images/icon-youtube.svg');
 }
+.youtube:hover {
+  background-image: url('../images/icon-youtube-hover.svg');
+}
 
 .twitter {
   background-image: url('../images/icon-twitter.svg');
 }
+.twitter:hover {
+  background-image: url('../images/icon-twitter-hover.svg');
+}
 .instagram {
   background-image: url('../images/icon-instagram.svg');
+}
+.instagram:hover {
+  background-image: url('../images/icon-instagram-hover.svg');
 }
 
 .button-container {
@@ -88,10 +108,26 @@
 .bg-white {
   background-color: hsl(0, 0%, 98%);
   color: hsl(227, 12%, 61%);
-  box-shadow: 2px 2px 5px hsl(0, 0%, 98%);
+  border-radius: 25px; 
+  padding-inline-start: 1rem;
+  padding-inline-end: 2.5rem;
+  padding-block: .7rem;
+}
+
+.bg-white:focus {
+  border: 2px solid $bright-red;
+  box-shadow: 2px 2px 5px $bright-red;
+  color: $bright-red;
+}
+
+.copy-right {
+  display: none;
 }
 
 @media (min-width : $min-width) {
+  .copy-right {
+    display: block;
+  }
   .footer {
     .container {
       display: flex;

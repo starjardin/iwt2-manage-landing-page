@@ -31,15 +31,21 @@
     list-style: none;
     padding: 3rem 1rem;
     text-align: center;
-    a {
-      text-decoration: none;
-      color: $dark-blue;
-      font-weight: 900;
-      font-size: 21px;
-      display: inline-block;
-      line-height: 52px;
-    }
   }
+}
+
+.navigation-item {
+  text-decoration: none;
+  color: $dark-blue;
+  font-weight: bold;
+  font-size: 21px;
+  display: inline-block;
+  line-height: 52px;
+  transition: .3s;
+}
+
+.navigation-item:hover {
+  color: $dark-grayish-blue;
 }
 
 label {

@@ -189,15 +189,23 @@
 		<footer class="footer">
 			<div class="container footer-container">
 				<div>
-					<div class="button-container">
-						<button class="btn bg-white">
-							updates in nyour inbox....
-						</button>
-						<button class="btn">
+					<form action="POST" class="button-container">
+						<label for="email"></label>
+						<input 
+							type="email" 
+							id="email"
+							class="bg-white"
+							placeholder="updates in nyour inbox...."
+						/>
+						<button type="submit" class="btn">
 							Go
 						</button>
-					</div>
-					<p>Copyright 2020. All Rights Reserved</p>
+					</form>
+					<p
+						class="copy-right"
+					>
+					Copyright 2020. All Rights Reserved
+					</p>
 				</div>
 				
 				<div class="text-links-container">

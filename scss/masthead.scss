@@ -34,9 +34,13 @@
   }
   
   .masthead {
-    background: none;
+    background-color: #ffffff;
+    //background-image: url('../images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
     .container {
-      background-image: url('../images/illustration-intro.svg'), url('../images/bg-tablet-pattern.svg');
+      background-image: url('../images/illustration-intro.svg');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: right;

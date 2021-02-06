@@ -19,7 +19,8 @@
 
 @media (min-width : $min-width) {
   .header {
-    background: none;
+    //background: none;
+    background-image: url('../images/bg-tablet-pattern.svg');
   }
   .header-container {
     background: none;
