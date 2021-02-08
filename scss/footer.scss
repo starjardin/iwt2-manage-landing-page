@@ -38,6 +38,7 @@
   justify-content: space-between;
   width: 100%;
   margin: 0;
+  padding-top: 2rem;
 }
 
 .anchor {
@@ -103,6 +104,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  align-items: baseline;
 }
 
 .bg-white {
@@ -115,19 +117,34 @@
 }
 
 .bg-white:focus {
+  outline: none;
   border: 2px solid $bright-red;
   box-shadow: 2px 2px 5px $bright-red;
   color: $bright-red;
+}
+
+.footer-email-label {
+  display: none;
+}
+
+.bg-white:focus ~ .footer-email-label {
+  display: block;
+  color: $bright-red;
+  margin-top: .5rem;
+  background: none;
 }
 
 .copy-right {
   display: none;
 }
 
+
+
 @media (min-width : $min-width) {
   .copy-right {
     display: block;
   }
+  
   .footer {
     .container {
       display: flex;
@@ -142,6 +159,7 @@
     max-width: max-content;
     gap: 1.3rem;
     margin: 0;
+    padding-top: 1rem;
   }
   .footer-logo-icons {
     display: flex;

@@ -405,6 +405,7 @@ label span {
   justify-content: space-between;
   width: 100%;
   margin: 0;
+  padding-top: 2rem;
 }
 
 .anchor {
@@ -476,6 +477,7 @@ label span {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  align-items: baseline;
 }
 
 .bg-white {
@@ -488,9 +490,21 @@ label span {
 }
 
 .bg-white:focus {
+  outline: none;
   border: 2px solid #f25f3a;
   box-shadow: 2px 2px 5px #f25f3a;
   color: #f25f3a;
+}
+
+.footer-email-label {
+  display: none;
+}
+
+.bg-white:focus ~ .footer-email-label {
+  display: block;
+  color: #f25f3a;
+  margin-top: 0.5rem;
+  background: none;
 }
 
 .copy-right {
@@ -514,6 +528,7 @@ label span {
     max-width: max-content;
     gap: 1.3rem;
     margin: 0;
+    padding-top: 1rem;
   }
 
   .footer-logo-icons {
