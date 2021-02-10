@@ -53,6 +53,28 @@
   }
 }
 
+.slide-buttons-container > button.slide-button {
+  background-color: $vary-light-gray;
+  border: none;
+  box-shadow: none;
+  font-size: 30px;
+  padding: .3rem;
+}
+
+button.slide-button span {
+  border-radius: 50%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  color: red;
+  background-color: red;
+}
+
+button.slide-button:focus span {
+  //background-color: red;
+}
+
+
 @media (min-width : $min-width) {
   .section-work {
     padding-bottom: 8rem;

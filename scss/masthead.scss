@@ -23,8 +23,9 @@
   color: hsl(227, 12%, 61%);
   font-size: 17px;
   font-weight: normal;
-  line-height: 1;
+  line-height: 30px;
   padding-block: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width : $min-width) {

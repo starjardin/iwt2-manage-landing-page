@@ -12,6 +12,8 @@ button {
 
 button:hover {
   transform: scale(1.1);
+  background-color: #f6866a;
+  box-shadow: 1px 5px 10px #f6866a;
 }
 
 button:focus {
@@ -27,7 +29,11 @@ p {
   line-height: 29px;
 }
 
-@media (min-width: 700px) {
+.container {
+  padding: 1rem;
+}
+
+@media (min-width: 1000px) {
   .container {
     max-width: 1220px;
     margin: auto;
@@ -46,11 +52,11 @@ p {
 
 .header-container {
   background-image: url("/illustration-intro.1ae4e850.svg");
-  padding-bottom: 100%;
+  padding-bottom: 60%;
   background-position: center 6rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   .header {
     background-image: url("/bg-tablet-pattern.7e77589d.svg");
   }
@@ -83,11 +89,12 @@ p {
   color: #9095a7;
   font-size: 17px;
   font-weight: normal;
-  line-height: 1;
+  line-height: 30px;
   padding-block: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   .masthead-container {
     text-align: start;
     margin: 0;
@@ -111,6 +118,7 @@ p {
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 [type=checkbox] {
@@ -124,13 +132,13 @@ p {
 }
 
 [type=checkbox]:checked ~ .navigation {
-  position: absolute;
+  position: fixed;
   display: block;
   top: 10%;
   width: 90%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 4;
 }
 [type=checkbox]:checked ~ .navigation .navigation-lists {
   background-color: #fefefefe;
@@ -168,7 +176,7 @@ label span {
 [type=checkbox]:checked ~ label {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -187,7 +195,7 @@ label span {
   display: none;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   [type=checkbox] ~ .navigation {
     transform: none;
   }
@@ -196,7 +204,8 @@ label span {
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    gap: 3rem;
+    flex-wrap: wrap;
+    column-gap: 2rem;
   }
   [type=checkbox] ~ .navigation ul a {
     text-decoration: none;
@@ -217,6 +226,9 @@ label span {
 .section-difference .container {
   background-color: #fafafa;
 }
+.section-difference .item {
+  margin: 3rem 0;
+}
 .section-difference .difference-heading {
   margin: 0;
   color: #242d52;
@@ -232,18 +244,22 @@ label span {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  align-items: center;
+  position: relative;
+  align-items: baseline;
+  margin: 1 0;
 }
 .section-difference .difference-subheader .difference-subheading {
   background-color: #ffefeb;
-  width: 100%;
-  padding: 1rem 0 1rem 2.5rem;
+  position: absolute;
+  left: 11%;
+  bottom: -65%;
+  width: 85%;
+  padding: 8px 0 16px 40px;
   transform: translateX(-20px);
-  position: initial;
   z-index: 3;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   .section-difference .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -252,9 +268,12 @@ label span {
   .section-difference .difference-header {
     max-width: 60%;
     text-align: start;
+    position: initial;
   }
   .section-difference .difference-subheader > .difference-subheading {
     background: none;
+    position: initial;
+    width: 100%;
   }
 }
 .section-work {
@@ -310,7 +329,24 @@ label span {
   padding-bottom: 2rem;
 }
 
-@media (min-width: 700px) {
+.slide-buttons-container > button.slide-button {
+  background-color: #fafafa;
+  border: none;
+  box-shadow: none;
+  font-size: 30px;
+  padding: 0.3rem;
+}
+
+button.slide-button span {
+  border-radius: 50%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  color: red;
+  background-color: red;
+}
+
+@media (min-width: 1000px) {
   .section-work {
     padding-bottom: 8rem;
   }
@@ -336,7 +372,7 @@ label span {
   text-align: center;
   background-image: url("/bg-simplify-section-mobile.9f7955ac.svg");
   background-repeat: no-repeat;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
 }
 
 .simplify-heading {
@@ -354,7 +390,7 @@ label span {
   color: #f25f3a;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   .simplify-container {
     display: flex;
     justify-content: space-between;
@@ -370,7 +406,7 @@ label span {
 }
 .footer {
   background-color: #1d1e25;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
 }
 
 .footer, .anchor {
@@ -403,7 +439,7 @@ label span {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 93%;
   margin: 0;
   padding-top: 2rem;
 }
@@ -480,7 +516,7 @@ label span {
   align-items: baseline;
 }
 
-.bg-white {
+.footer-email {
   background-color: #fafafa;
   color: #9095a7;
   border-radius: 25px;
@@ -500,7 +536,7 @@ label span {
   display: none;
 }
 
-.bg-white:focus ~ .footer-email-label {
+.footer-email:focus ~ .footer-email-label {
   display: block;
   color: #f25f3a;
   margin-top: 0.5rem;
@@ -511,7 +547,7 @@ label span {
   display: none;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   .copy-right {
     display: block;
   }

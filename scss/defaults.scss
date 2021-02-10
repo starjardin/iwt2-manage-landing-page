@@ -12,9 +12,10 @@ button {
   box-shadow: 1px 5px 10px $bright-red;
 }
 
-
 button:hover {
   transform: scale(1.1);
+  background-color: hsl(12, 88%, 69%);
+  box-shadow: 1px 5px 10px hsl(12, 88%, 69%);
 }
 
 button:focus {
@@ -28,6 +29,10 @@ p {
   font-weight: 400;
   font-style: normal;
   line-height: 29px;
+}
+
+.container {
+  padding: 1rem;
 }
 
 @media (min-width : $min-width) {

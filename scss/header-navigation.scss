@@ -5,6 +5,7 @@
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 [type="checkbox"] {
@@ -18,13 +19,13 @@
 }
 
 [type="checkbox"]:checked ~ .navigation {
-  position: absolute;
+  position: fixed;
   display: block;
   top: 10%;
   width: 90%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 4;
   
   .navigation-lists {
     background-color: #fefefefe;
@@ -63,7 +64,7 @@ label {
 [type="checkbox"]:checked ~ label {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -82,7 +83,7 @@ label {
   display: none;
 }
 
-@media (min-width : 700px) {
+@media (min-width : $min-width) {
   [type="checkbox"] ~ .navigation {
     transform: none;
     ul {
@@ -90,7 +91,8 @@ label {
       flex-direction: row;
       justify-content: space-between;
       list-style: none;
-      gap: 3rem;
+      flex-wrap: wrap;
+      column-gap: 2rem;
       a {
         text-decoration: none;
       }

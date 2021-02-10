@@ -2,7 +2,7 @@
 
 .footer {
   background-color: $very-dark-blue;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
 }
 
 .footer, .anchor {
@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 93%;
   margin: 0;
   padding-top: 2rem;
 }
@@ -107,7 +107,7 @@
   align-items: baseline;
 }
 
-.bg-white {
+.footer-email {
   background-color: hsl(0, 0%, 98%);
   color: hsl(227, 12%, 61%);
   border-radius: 25px; 
@@ -127,7 +127,7 @@
   display: none;
 }
 
-.bg-white:focus ~ .footer-email-label {
+.footer-email:focus ~ .footer-email-label {
   display: block;
   color: $bright-red;
   margin-top: .5rem;
